@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Краткая информация о языках программирования</title>
+    <style>
+        body {
+            font-family: Times New Roman, Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            background: url('Back.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+        header {
+            background: #3a3a3a;
+            color: #ffffff;
+            padding: 5px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            padding-bottom: 100px; 
+            
+        }
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 50px;
+            text-decoration: underline;
+        }
+        h3 {
+            color: #ffffff;            
+            text-align: justify;
+            font-size: 24px;           
+        }
+        h4 {
+            color: #ffffff;            
+            text-align: justify;
+            font-size: 24px;           
+        }
+        ul {
+            list-style-type: none;
+            padding: 50;
+        }
+        ul1 {
+            list-style-type: none;            
+        }
+        li {
+            background: #ffffff;
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 100px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .tab {
+            display: none;
+        }
+        .tab-button {
+            padding: 10px;
+            margin: 0;
+            cursor: pointer;
+            background: #eaeaea;
+            border: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .tab-button.active {
+            background: #ffffff;
+            border-bottom: 2px solid #3a3a3a;
+        }
+        .image-container {
+            position: relative;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container1 {
+            position: bottom;
+            text-align: center;
+            margin: 150px 0;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+        }
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            pointer-events: none; /* чтобы текст не перекрывал действия на изображении */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.05em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            margin-top: auto;
+            
+         }
+    </style>
+    <script>
+        function showTab(tabIndex) {
+            var tabs = document.getElementsByClassName('tab');
+            var buttons = document.getElementsByClassName('tab-button');
+
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none'; // скрыть все вкладки
+                buttons[i].classList.remove('active'); // удалить активный класс у всех кнопок
+            }
+
+            tabs[tabIndex].style.display = 'block'; // показать выбранную вкладку
+            buttons[tabIndex].classList.add('active'); // добавить активный класс кнопке
+        }
+
+        window.onload = function() {
+            showTab(0); // показываем первую вкладку по умолчанию
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Виды языков программирования</h1>
+</header>
+
+<main>
+    <div>
+        <div class="image-container">                  
+        <button class="tab-button" onclick="showTab(0)">Страница 1</button>
+        <button class="tab-button" onclick="showTab(1)">Страница 2</button>
+        <button class="tab-button" onclick="showTab(2)">Страница 3</button>
+        
+    </div>
+
+    <div class="tab">
+        <img src="front.jpeg" style="width:100%;"> 
+        <h2>Основные категории языков программирования</h2>  
+                      
+        <ul>      
+            <li><strong>Низкоуровневые языки:</strong> Ассемблер, машинный код.</li>
+            <li><strong>Высокоуровневые языки:</strong> C, C++, Java.</li>
+            <li><strong>Языки скриптов:</strong> JavaScript, Python, Ruby.</li>
+            <li><strong>Функциональные языки:</strong> Haskell, Scala, Elixir.</li>
+            <li><strong>Объектно-ориентированные языки:</strong> C#, Java, Python.</li>
+            <h3>Языки программирования играют ключевую роль в разработке программного обеспечения. Они прошли долгий путь от машинных языков до современных высокоуровневых языков.<h3>
+            <h3>Классификация языков программирования помогает лучше понять их особенности и области применения.<h3>
+            <h3>Изучение различных языков программирования позволяет выбрать наиболее подходящий инструмент для решения конкретных задач.<h3>
+            <h3>Важно помнить, что каждый язык программирования имеет свои сильные и слабые стороны, и выбор языка зависит от конкретных требований проекта и предпочтений разработчика.</h3>
+        </ul>
+        
+    </div>
+
+    <div class="tab">
+         
+        <h2>Популярные языки программирования</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>C#</li>
+            <h3>Выбор первого языка программирования может определить дальнейшую карьеру. Важно не торопиться и взвесить все факторы.<h3>
+            <h3>«Популярность языков программирования быстро меняется. При этом для обучения нужно время, для профессионального роста — тем более. Смена технологического стека — тоже сложная задача, особенно если базовые знания недостаточно крепкие.<h3>
+            <h3>Главное — отталкиваться от того, в каком направлении вы хотите работать и что вас действительно интересует. Еще нужно понять, насколько нравится язык, который собираетесь изучать (его идея/подходы), сколько вакансий для работы на нем сейчас есть на рынке и как они оплачиваются.<h3>
+            <h3>Еще один фактор, играющий важную роль, — это люди, которые могут помочь с обучением. Например, если ваш лучший друг профессионально пишет на Golang, а вы решили учить C#, вы лишаетесь потенциально полезных инсайтов, которые могли бы получить совершенно бесплатно. А, возможно, даже упускаете шанс на первую работу», — говорит IT-эксперт, backend-разработчик Филипп Щербанич<h3>
+            <h2>Статистика языков программирования за 2024 год.</h2>
+        </ul>
+        <img src="str2.jpg" style="width:100%;">
+    </div>
+
+    <div class="tab">
+        <h2>Интересные факты</h2>               
+       <ul>
+        <h3>1) В мире существует более 8 500 языков программирования.<h3>
+        <h3>2) Язык программирования Python назван так потому, что его создатель любил сериал «Летающий цирк Монти Пайтона».<h3> 
+        <h3>3) Язык программирования Pascal создан Никлаусом Виртом и назван в честь французского философа, физика и математика Блеза Паскаля.<h3> 
+        <h3>4) В языке программирования APL самая короткая завершённая программа может состоять из одного символа, например буквы «q».<h3>  
+        <h3>5) В 2009 году Даниэль Темкин создал язык программирования Velato, который использует звуковые файлы в качестве исходного кода. Программа на Velato определяется высотой и порядком нот.<h3> 
+        <h3>6) Существует язык программирования ArnoldC, созданный на основе цитат персонажей Арнольда Шварценеггера. В языке присутствуют цитаты из фильмов «Терминатор», «Хищник», «Вспомнить всё», «Коммандо», «Конан-варвар».<h3>
+        <h3>7) 1843 год — год создания первого в мире языка компьютерного программирования, машинного алгоритма Ады Лавлейс для разностной машины Чарльза Бэббиджа. Она записала его на листе бумаги, потому что в то время компьютеров не существовало.<h3>
+       </ul>
+       <ul>
+        <h2>Ложные факты</h2> 
+        <h3><strike>Утверждение о том, что можно выучить язык программирования за час. На самом деле освоение языка — небыстрый процесс. У опытного программиста изучение нового языка может занять несколько дней, у новичка — месяцы.</strike><h3> 
+        <h3><strike>Утверждение о том, что языки программирования можно коллекционировать. Языки программирования не являются предметами коллекционирования, их изучение не гарантирует получение работы.</strike><h3> 
+        <h3><strike>Утверждение о том, что некоторые языки программирования, например C# и Java, не подходят для новичков. Эти языки популярны и имеют большое сообщество, но для новичков они могут быть слишком сложными для старта.</strike><h3> 
+        <h3><strike>Утверждение о том, что SQL не следует изучать в первую очередь, так как это язык запросов, а не полноценный язык программирования. SQL — полноценный язык программирования.</strike><h3> 
+        <h3>Термин «баг» в программировании происходит от насекомого. В 1947 году при разработке компьютера Mark II в Гарварде инженеры обнаружили, что проблема с работой машины была вызвана молью, застрявшей в электронной панели. - Единственный факт из ложных, который является правдой.<h3>
+        <h3><strike>Утверждение о том, что Swift и Kotlin не рекомендуются новичкам из-за сложности освоения. Эти языки используются для разработки мобильных приложений, но они не подходят для новичков.</strike></strike><h3> 
+     </ul>
+    </div>
+</main>
+</section>
+    </main>
+      <div>
+        <div class="image-container1">                  
+        <button class="tab-button" onclick="showTab(0)">Страница 1</button>
+        <button class="tab-button" onclick="showTab(1)">Страница 2</button>
+        <button class="tab-button" onclick="showTab(2)">Страница 3</button>
+       
+    </div>
+    <footer>
+        <p>&copy; 2025 Тематический сайт посвященный программированию</p>
+    </footer>
+</body>
+</html>
